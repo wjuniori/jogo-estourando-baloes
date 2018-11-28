@@ -1,0 +1,35 @@
+/*
+*
+* @author Washington Júnior
+* @version 0.1
+*/
+
+/* ********** PALETA DE CORES **********
+
+*/
+
+section {
+  padding-top: 20px;
+}
+
+.base {
+  max-width: 600px; /*mesma largura da imagem do cenário (cenario.png) */
+
+  /* Centralizar um elemento HTML */
+  margin: 0 auto;
+}
+
+.base-img {
+  display: inline-block; 
+  width: 33.3%; 
+  text-align: center;
+}
+
+.cenario {
+  background: url(../img/game/cenario.png);
+  max-height: 550px; /*mesma altura da imagem do cenário (cenario.png) */
+}
+
+.img-balao {
+  padding: 7px;
+}

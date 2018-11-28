@@ -3,7 +3,7 @@ var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 var imageMin = require('gulp-imagemin');
-var concat = require('gulp-concat');
+var rename = require('gulp-rename');
 var htmlMin = require('gulp-htmlmin');
 var notify = require('gulp-notify');
 
@@ -64,7 +64,9 @@ gulp.task('html', ['html:minify']);
 gulp.task('css:minify', function() {
   return gulp.src(cssFiles)
     .pipe(cleanCSS())
-    .pipe(concat('estourando-baloes.min.css'))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(gulp.dest('./public/dist/css'))
     .pipe(browserSync.stream());
 });
@@ -77,7 +79,9 @@ gulp.task('js:minify', function() {
   return gulp.src(jsFiles)
     .pipe(uglify())
     .on("error", notify.onError("Error: <%= error.message %>"))
-    .pipe(concat('estourando-baloes.min.js'))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(gulp.dest('./public/dist/js'))
     .pipe(browserSync.stream());
 });
