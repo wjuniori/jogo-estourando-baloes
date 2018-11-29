@@ -1,1 +1,1 @@
-section{padding-top:20px}.base{max-width:600px;margin:0 auto}.base-img{display:inline-block;width:33.3%;text-align:center}.cenario{background:url(../img/game/cenario.png);max-height:550px}.img-balao{padding:7px}
+section{padding-top:20px}.base{max-width:600px;margin:0 auto;border:1px solid}.base-img{display:inline-block;width:33.3%;text-align:center}#cenario{background:url(../img/game-screen/cenario.png);max-height:550px;border:0}.img-balao{margin:10px}

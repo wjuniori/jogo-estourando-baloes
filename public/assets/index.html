@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="public/dist/css/index.min.css">
 
     <!-- Favicon -->
-    <link rel="icon" href="public/dist/img/brand/">
+    <link rel="icon" href="public/dist/img/game-screen/balao-azul-pequeno-estourado.png">
 
     <title>Estourando Balões - Início</title>
   </head>
@@ -23,15 +23,13 @@
         <div class="row">
           <div class="col-12">
             <p>Nível:
-              <select>
+              <select id="nivel">
                 <option value="1">Fácil</option>
                 <option value="2">Normal</option>
                 <option value="3">Difícil</option>
               </select>
             </p>
-            <a href="jogo.html">
-              <img src="public/dist/img/start-screen/botao-iniciar.png" alt="Botão Iniciar">
-            </a>
+            <img onclick="iniciarJogo()" src="public/dist/img/start-screen/botao-iniciar.png" alt="Botão Iniciar">
           </div>
         </div> <!-- row -->
       </div> <!-- container -->

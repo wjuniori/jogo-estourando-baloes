@@ -13,10 +13,9 @@ section {
 }
 
 .base {
-  max-width: 600px; /*mesma largura da imagem do cenário (cenario.png) */
-
-  /* Centralizar um elemento HTML */
-  margin: 0 auto;
+  max-width: 600px; /* Same width of the scenery image (cenario.png) */
+  margin: 0 auto; /* Center an HTML element */
+  border: 1px solid;
 }
 
 .base-img {
@@ -25,11 +24,12 @@ section {
   text-align: center;
 }
 
-.cenario {
-  background: url(../img/game/cenario.png);
-  max-height: 550px; /*mesma altura da imagem do cenário (cenario.png) */
+#cenario {
+  background: url(../img/game-screen/cenario.png);
+  max-height: 550px; /* Same height of the scenery image (cenario.png) */
+  border: 0;
 }
 
 .img-balao {
-  padding: 7px;
+  margin: 10px;
 }

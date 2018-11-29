@@ -12,11 +12,11 @@
     <link rel="stylesheet" type="text/css" href="public/dist/css/jogo.min.css">
 
     <!-- Favicon -->
-    <link rel="icon" href="public/dist/img/brand/">
+    <link rel="icon" href="public/dist/img/game-screen/balao-azul-pequeno-estourado.png">
 
     <title>Estourando Balões - Jogo</title>
   </head>
-  <body>
+  <body onload="iniciarJogo()">
     
     <section>
       <div class="container">
@@ -24,16 +24,16 @@
           <div class="col-12">
             <div class="base">
               <div class="base-img">
-                <img class="img-fluid" src="public/dist/img/game/balao-azul-grande-inteiro.png" alt="Balão azul grande inteiro">
-                <p class="m-0">80</p>
+                <img class="img-fluid" src="public/dist/img/game-screen/balao-azul-grande-inteiro.png" alt="Balão azul grande inteiro">
+                <p id="qtdInteiro" class="m-0">80</p>
               </div>
               <div class="base-img">
-                <img class="img-fluid" src="public/dist/img/game/balao-azul-grande-estourado.png" alt="Balão azul grande estourado">
-                <p class="m-0">0</p>
+                <img class="img-fluid" src="public/dist/img/game-screen/balao-azul-grande-estourado.png" alt="Balão azul grande estourado">
+                <p id="qtdEstourado" class="m-0">0</p>
               </div>
               <div class="base-img">
-                <img class="img-fluid" src="public/dist/img/game/cronometro.png" alt="Cronômetro">
-                <p class="m-0">80</p>
+                <img class="img-fluid" src="public/dist/img/game-screen/cronometro.png" alt="Cronômetro">
+                <p id="tempo" class="m-0"></p>
               </div>
             </div>
           </div>
@@ -41,9 +41,7 @@
       
         <div class="row">
           <div class="col-12">
-            <div class="base cenario">
-              <img class="img-fluid img-balao" src="public/dist/img/game/balao-azul-pequeno-inteiro.png" alt="Balão azul pequeno inteiro">  
-            </div>
+            <div id="cenario" class="base"></div>
           </div>
         </div> <!-- row -->
       </div> <!-- container -->
