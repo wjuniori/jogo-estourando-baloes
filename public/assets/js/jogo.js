@@ -1,9 +1,12 @@
+var qtdBalao;
+var intervalo;
+
 function iniciarJogo() {
   
-  var qtdBalao = 80;
   var url = location.href; // Return the href property:
   var nivel = url.split("?")[1];
   var tempo;
+  qtdBalao = 80;
 
   switch (nivel) {
     case '1':
@@ -19,12 +22,16 @@ function iniciarJogo() {
       break;
   }
 
-  document.getElementById('tempo').innerHTML = tempo; // Update timer time
+  criarBalao();
 
-  criarBalao(qtdBalao);
+  // Update timer time
+  document.getElementById('tempo').innerHTML = tempo;
+
+  // The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds). The setInterval() method will continue calling the function until clearInterval() is called, or the window is closed.
+  intervalo = setInterval(contarTempo, 1000);
 }
 
-function criarBalao(qtdBalao) {
+function criarBalao() {
   
   for (var i = 1; i <= qtdBalao; i++) {
     
@@ -55,6 +62,38 @@ function estourar(balao) {
   document.getElementById('qtdEstourado').innerHTML=  qtdEstourado;
 
   if (qtdInteiro == 0) {
-    alert('Parabéns! Você estourou todos os balões no tempo.');
+    // The clearInterval() method clears a timer set with the setInterval() method.
+    clearInterval(intervalo);
+    
+    // The setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds. The function is only executed once.
+    setTimeout(function(){ alert('Parabéns! Você estourou todos os balões no tempo.'); }, 500);
+  }
+}
+
+function contarTempo() {
+  
+  var tempo = parseInt(document.getElementById('tempo').innerHTML);
+  tempo = --tempo;
+  document.getElementById('tempo').innerHTML = tempo; // Update timer time
+
+  if (tempo == 0) {
+    // The clearInterval() method clears a timer set with the setInterval() method.
+    clearInterval(intervalo);
+    pararEstouro();
+
+    // The setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds. The function is only executed once.
+    setTimeout(function(){ alert('Você perdeu! Você não conseguiu estourar todos os balões no tempo.'); }, 500);
+  }
+}
+
+function pararEstouro() {
+  
+  for (var i = 1; i <= qtdBalao; i++) {
+
+    var balao = document.getElementById('b' + i);
+
+    if (balao.getAttribute("onclick") != "") {
+      balao.setAttribute("onclick", "");
+    }
   }
 }

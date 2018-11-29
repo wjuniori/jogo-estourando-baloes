@@ -10,6 +10,15 @@
 
 section {
   padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+section p {
+  font-size: 40px;
+}
+
+section p#tempo {
+  color: red;
 }
 
 .base {
@@ -25,8 +34,15 @@ section {
 }
 
 #cenario {
+  /* The image used */
   background: url(../img/game-screen/cenario.png);
-  max-height: 550px; /* Same height of the scenery image (cenario.png) */
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Other styling */
   border: 0;
 }
 
