@@ -5,7 +5,7 @@ function iniciarJogo() {
   
   var url = location.href; // Return the href property:
   var nivel = url.split("?")[1];
-  var tempo;
+  var tempo = 10; // standard time (10s)
   qtdBalao = 80;
 
   switch (nivel) {
@@ -21,6 +21,8 @@ function iniciarJogo() {
       tempo = 30;
       break;
   }
+
+  document.getElementById('qtdInteiro').innerHTML = qtdBalao;
 
   criarBalao();
 
