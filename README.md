@@ -1,6 +1,6 @@
 # jogo-estourando-baloes
 
-This repository contains the resources and source code of the estourando-baloes game.
+This repository contains the resources and source code of the estourando-baloes game. The jogo-estourando-baloes was carried out during the [Udemy] Curso completo de Desenvolvimento Web - Crie 6 projetos.
 
 ## Preview
 
@@ -20,7 +20,7 @@ This repository contains the resources and source code of the estourando-baloes 
 
 ### Basic Usage
 
-After downloading, simply edit the HTML and CSS files included with the website in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+After downloading, simply edit the HTML, CSS and JS files included with the website in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
 ### Advanced Usage
 
@@ -41,8 +41,8 @@ You must have npm and Gulp installed globally on your machine in order to use th
 
 ## Bugs and Issues
 
-Have a bug or an issue with this website? [Open a new issue](https://github.com/wjuniori/jogo-estourando-baloes/issues) here on GitHub
+Have a bug or an issue with this website? [Open a new issue](https://github.com/wjuniori/jogo-estourando-baloes/issues) here on GitHub.
 
 ## About
 
-This repository/website was created by and is maintained by **[Washington Júnior](https://github.com/wjuniori/)**
+This repository was created by and is maintained by **[Washington Júnior](https://github.com/wjuniori/)**. To see more projects, visit [portfolio](https://wjuniori.github.io/).
